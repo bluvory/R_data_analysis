@@ -1,27 +1,27 @@
-#### 04-1 µ¥ÀÌÅÍ ÇÁ·¹ÀÓ ÀÌÇØÇÏ±â ####
+#### 04-1 ë°ì´í„° í”„ë ˆìž„ ì´í•´í•˜ê¸° ####
 
-# ¿­(column) : º¯¼ö(variable)
-# Çà(row) : ÄÉÀÌ½º(case)
+# ì—´(column) : ë³€ìˆ˜(variable)
+# í–‰(row) : ì¼€ì´ìŠ¤(case)
 
-# µ¥ÀÌÅÍ°¡ Å©´Ù
-# ÇàÀÌ ¸¹´Ù -> ÄÄÇ»ÅÍ°¡ ´À·ÁÁü  -> °í»ç¾ç Àåºñ ±¸Ãà
-# ¿­ÀÌ ¸¹´Ù -> ºÐ¼® ¹æ¹ýÀÇ ÇÑ°è -> °í±Þ ºÐ¼® ¹æ¹ý
-
-
+# ë°ì´í„°ê°€ í¬ë‹¤
+# í–‰ì´ ë§Žë‹¤ -> ì»´í“¨í„°ê°€ ëŠë ¤ì§  -> ê³ ì‚¬ì–‘ ìž¥ë¹„ êµ¬ì¶•
+# ì—´ì´ ë§Žë‹¤ -> ë¶„ì„ ë°©ë²•ì˜ í•œê³„ -> ê³ ê¸‰ ë¶„ì„ ë°©ë²•
 
 
 
-#### 04-2 µ¥ÀÌÅÍ ÇÁ·¹ÀÓ ¸¸µé±â ####
+
+
+#### 04-2 ë°ì´í„° í”„ë ˆìž„ ë§Œë“¤ê¸° ####
 
 
 ## -------------------------------------------------------------------- ##
 
 
-english <- c(90, 80, 60, 70)   # ¿µ¾î Á¡¼ö »ý¼º
+english <- c(90, 80, 60, 70)   # ì˜ì–´ ì ìˆ˜ ìƒì„±
 
-math <- c(50, 60, 100, 20)     # ¼öÇÐ Á¡¼ö »ý¼º
+math <- c(50, 60, 100, 20)     # ìˆ˜í•™ ì ìˆ˜ ìƒì„±
 
-# englist, math·Î µ¥ÀÌÅÍ ÇÁ·¹ÀÓ »ý¼ºÇØ¼­ df_midterm¿¡ ÇÒ´ç
+# englist, mathë¡œ ë°ì´í„° í”„ë ˆìž„ ìƒì„±í•´ì„œ df_midtermì— í• ë‹¹
 df_midterm <- data.frame(english, math)
 df_midterm
 
@@ -30,13 +30,13 @@ class <- c(1, 1, 2, 2)
 df_midterm <- data.frame(english, math, class)
 df_midterm
 
-# df_midtermÀÇ english·Î Æò±Õ »êÃâ
+# df_midtermì˜ englishë¡œ í‰ê·  ì‚°ì¶œ
 mean(df_midterm$english)
 
-# df_midtermÀÇ math·Î Æò±Õ »êÃâ
+# df_midtermì˜ mathë¡œ í‰ê·  ì‚°ì¶œ
 mean(df_midterm$math)
 
-# µ¥ÀÌÅÍ ÇÁ·¹ÀÓ ÇÑ¹ø¿¡ ¸¸µé±â
+# ë°ì´í„° í”„ë ˆìž„ í•œë²ˆì— ë§Œë“¤ê¸°
 df_midterm <- data.frame(english = c(90, 80, 60, 70),
                          math = c(50, 60, 100, 20),
                          class = c(1, 1, 2, 2))
@@ -46,60 +46,60 @@ df_midterm
 
 
 
-#### 04-3 ¿ÜºÎ µ¥ÀÌÅÍ ÀÌ¿ëÇÏ±â ####
+#### 04-3 ì™¸ë¶€ ë°ì´í„° ì´ìš©í•˜ê¸° ####
 
 
 ## -------------------------------------------------------------------- ##
 
 
-# readxl ÆÐÅ°Áö ¼³Ä¡ÇÏ°í ·ÎµåÇÏ±â
+# readxl íŒ¨í‚¤ì§€ ì„¤ì¹˜í•˜ê³  ë¡œë“œí•˜ê¸°
 install.packages("readxl")
 library(readxl)
 
-# °æ·Î ÁöÁ¤
-setwd("C:/Users/eunbi/Desktop/myAI/½±°Ô ¹è¿ì´Â R µ¥ÀÌÅÍ ºÐ¼®/data")
+# ê²½ë¡œ ì§€ì •
+setwd("C:/Users/eunbi/Desktop/myAI/ì‰½ê²Œ ë°°ìš°ëŠ” R ë°ì´í„° ë¶„ì„/data")
 getwd()
 dir()
 
-# ¿¢¼¿ ÆÄÀÏÀ» ºÒ·¯¿Í df_exam¿¡ ÇÒ´ç
+# ì—‘ì…€ íŒŒì¼ì„ ë¶ˆëŸ¬ì™€ df_examì— í• ë‹¹
 df_exam <- read_excel("excel_exam.xlsx")
 df_exam
 
 df_exam_novar <- read_excel("excel_exam_novar.xlsx")
 df_exam_novar
 
-# col_names=F : ¿­ ÀÌ¸§À» °¡Á®¿Ã °ÍÀÎ°¡? (True/False)
+# col_names=F : ì—´ ì´ë¦„ì„ ê°€ì ¸ì˜¬ ê²ƒì¸ê°€? (True/False)
 df_exam_novar <- read_excel("excel_exam_novar.xlsx", col_names=F)
 df_exam_novar
 
-# ¿¢¼¿ ÆÄÀÏ¿¡ ½ÃÆ®°¡ ¿©·¯ °³ ÀÖ´Ù¸é
+# ì—‘ì…€ íŒŒì¼ì— ì‹œíŠ¸ê°€ ì—¬ëŸ¬ ê°œ ìžˆë‹¤ë©´
 df_exam_sheet <- read_excel("excel_exam_sheet.xlsx", sheet=3)
 
-# csv ÆÄÀÏ ºÒ·¯¿À±â
+# csv íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 df_csv_exam <- read.csv("csv_exam.csv")
 df_csv_exam
 
-# ¹®ÀÚ°¡ µé¾îÀÖ´Â ÆÄÀÏÀ» ºÒ·¯¿Ã ¶§ : stringsAsFactors = F
+# ë¬¸ìžê°€ ë“¤ì–´ìžˆëŠ” íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¬ ë•Œ : stringsAsFactors = F
 df_csv_exam <- read.csv("csv_exam.csv", strinsgsAsFactors=F)
 
 
-# µ¥ÀÌÅÍ ÇÁ·¹ÀÓÀ» csvÆÄÀÏ·Î ÀúÀåÇÏ±â
+# ë°ì´í„° í”„ë ˆìž„ì„ csvíŒŒì¼ë¡œ ì €ìž¥í•˜ê¸°
 
 df_midterm <- data.frame(english = c(90, 80, 60, 70),
                          math = c(50, 60, 100, 20),
                          class = c(1, 1, 2, 2))
 
-# csv ÆÄÀÏ·Î ÀúÀåÇÏ±â
+# csv íŒŒì¼ë¡œ ì €ìž¥í•˜ê¸°
 write.csv(df_midterm, file="df_midterm.csv")
 
 
-# µ¥ÀÌÅÍ ÇÁ·¹ÀÓÀ» RDS ÆÄÀÏ·Î ÀúÀåÇÏ±â
+# ë°ì´í„° í”„ë ˆìž„ì„ RDS íŒŒì¼ë¡œ ì €ìž¥í•˜ê¸°
 saveRDS(df_midterm, file="df_midterm.rds")
 
-# RDS ÆÄÀÏ ºÒ·¯¿À±â Àü ÆÄÀÏ »èÁ¦
+# RDS íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸° ì „ íŒŒì¼ ì‚­ì œ
 rm(df_midterm)
 df_midterm   # ERROR
 
-# RDS ÆÄÀÏ ºÒ·¯¿À±â
+# RDS íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 df_midterm <- readRDS("df_midterm.rds")
 df_midterm
