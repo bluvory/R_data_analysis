@@ -1,14 +1,14 @@
 # R_data_analysis
 쉽게 배우는 R 데이터 분석 / 이지스퍼블리싱
 
-## 첫째마당 | R이랑 친해지기
+## PART01
 
-### CH03(https://github.com/bluvory/Python_for_coding_test/tree/main/ch03)
+#### CH03
 [ch03](https://github.com/bluvory/Python_for_coding_test/tree/main/ch03): 그리디
 
-## 둘째마당 | 본격 실습! 데이터 갖고 놀기
+## PART02
 
-## 셋째마당 | 실전! 데이터 분석 프로젝트
+## PART03
 
 # Python_for_coding_test
 이것이 취업을 위한 코딩 테스트다 with 파이썬 / 한빛미디어
